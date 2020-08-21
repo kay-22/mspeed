@@ -12,6 +12,7 @@ set(FLAGS_RELEASE "${FLAGS_COMP} -DNDEBUG")
 set(CMAKE_C_FLAGS ${FLAGS_RELEASE})
 
 add_executable(mspeed main.c)
+target_link_libraries(mspeed user32.lib)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
