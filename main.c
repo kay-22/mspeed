@@ -6,20 +6,20 @@
 
 
 #define SPEED_INDEX 1
-#define ARGS            2
+#define ARGS        2
 
 int main (int argc, char ** argv)
 {
     if (argc != ARGS) 
     {
-        fprintf(stderr, "Error: mspeed only takes one argument. Try 'mspeed <speed>'. speed must be between 0 and 20.");
+        fprintf(stderr, "Error: mspeed only takes one argument. Try 'mspeed <speed>'. speed must be between 1 and 20.");
         return EXIT_FAILURE;
     }
     
     int new_speed = atoi(argv[SPEED_INDEX]);
-    if (new_speed < 0 || new_speed > 20) 
+    if (new_speed < 1 || new_speed > 20) 
     {
-        fprintf(stderr, "Error: invalid mouse speed -- must be between 0 and 20");
+        fprintf(stderr, "Error: invalid mouse speed -- must be between 1 and 20");
         return EXIT_FAILURE;
     }
 
